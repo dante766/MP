@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Transferencia</title>
 <style>
   body {
@@ -22,6 +22,12 @@
     padding: 50px 20px;
     font-size: 18px;
   }
+  .monto-grande {
+    font-size: 72px; /* aumento tamaño */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
   .mensaje {
     margin: 20px 0;
     font-size: 20px;
@@ -34,6 +40,50 @@
   a:hover {
     text-decoration: underline;
   }
+  .motivo-container {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .motivo-label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .motivo-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 220px;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .motivo-input:disabled {
+    background-color: #e9e9e9;
+    color: #555;
+  }
+  .motivo-text {
+    user-select: none;
+  }
+  .icon-start,
+  .icon-end {
+    margin: 0 6px;
+    font-size: 18px;
+  }
+  .btn-enviar {
+    background-color: #0077cc;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: default; /* indica que no hace nada */
+  }
 </style>
 </head>
 <body>
@@ -43,11 +93,21 @@
 </div>
 
 <div class="contenido">
-  <div class="mensaje">
-    $ Ingrese el monto
+  <div class="monto-grande">
+    $ 0
   </div>
-  <div>
-    Ingrese <a href="https://docs.google.com/forms/d/e/1FAIpQLScOhBObfNXsaYPpfidv1L5MGxykMQmfeE988GPk99J0NOd7og/viewform?usp=dialog" target="_blank">AQUI</a>
+  <div class="mensaje">
+    $ Ingrese el monto desde <a href="https://docs.google.com/forms/d/e/1FAIpQLScOhBObfNXsaYPpfidv1L5MGxykMQmfeE988GPk99J0NOd7og/viewform?usp=dialog" target="_blank">AQUI</a>
+  </div>
+
+  <div class="motivo-container">
+    <label class="motivo-label" for="motivo">Motivo</label>
+    <div class="motivo-input" id="motivo" aria-readonly="true" tabindex="0" role="textbox">
+      <span class="icon-start" aria-hidden="true">💵</span>
+      <span class="motivo-text">Regalo para Leon</span>
+      <span class="icon-end" aria-hidden="true">🎁</span>
+    </div>
+    <button class="btn-enviar">Enviar</button>
   </div>
 </div>
 
