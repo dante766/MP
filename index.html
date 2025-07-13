@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fondo con Imagen</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background-image: url('trans.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .contenido {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+  <div class="contenido">
+    <h1>¡Bienvenido!</h1>
+    <p>Ahora deberías ver tu imagen <strong>trans.png</strong> como fondo 👀</p>
+  </div>
+</body>
+</html>
