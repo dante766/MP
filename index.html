@@ -3,34 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fondo con Imagen</title>
+<title>Transferencia</title>
 <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
   body {
-    background-image: url('trans.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .cabecera {
+    background-color: #ffe600; /* amarillo Mercado Libre */
+    color: #000;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
   }
   .contenido {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: black;
-    font-size: 2rem;
-    padding: 50px;
-    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* gris muy claro */
+    padding: 50px 20px;
+    font-size: 18px;
+  }
+  .mensaje {
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
 <body>
-  <div class="contenido">
-    <h1>¡Bienvenido!</h1>
-    <p>Ahora deberías ver tu imagen <strong>trans.png</strong> como fondo 👀</p>
+
+<div class="cabecera">
+  ¿Cuánto dinero querés transferir?
+</div>
+
+<div class="contenido">
+  <div class="mensaje">
+    $ Ingrese el monto
   </div>
+  <div>
+    Ingrese <a href="https://docs.google.com/forms/d/e/1FAIpQLScOhBObfNXsaYPpfidv1L5MGxykMQmfeE988GPk99J0NOd7og/viewform?usp=dialog" target="_blank">AQUI</a>
+  </div>
+</div>
+
 </body>
 </html>
